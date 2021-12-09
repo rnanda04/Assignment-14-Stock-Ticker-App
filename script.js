@@ -8,7 +8,7 @@ var col =
 {"Adidas":"ADDDF"},
 {"Alphabet Inc.":"GOOG"},
 {"Google":"GOOG"},
-{"Amazon.Com Inc":"AMZN"},
+{"Amazon.com Inc.":"AMZN"},
 {"Amazon":"AMZN"},
 {"AMC Entertainment":"AMC"},
 {"American Eagle Outfitter":"AEO"},
@@ -40,7 +40,7 @@ app.post("/submit", function(req, res){
   if (comp == "") {
     for (i in col) {
       if (tick == Object.values(col[i])) {
-        result += Object.keys(col[i]) + ', ';
+        result += Object.keys(col[i]) + "<br>";
       }
     }
     res.send(result); 
@@ -49,5 +49,8 @@ app.post("/submit", function(req, res){
 
 var url = 8080; 
 app.listen(url, () => {
-  console.log('Running on port ' + url);
+  console.log('Running on port ' + url + "...");
 }); 
+
+app.listen(process.env.PORT || 3000, 
+  () => console.log("Running on port 3000..."));
