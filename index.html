@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment 14: Stock Ticker App</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+	<meta charset="UTF-8">
+</head>
+<body>
+	<div class="container">
+		<h1>Stocker Ticker</h1>
+		<h2>Enter a company name or stock ticker!</h1>
+		<form method="POST" action="http://localhost:8080/submit">
+			<label>Company:<input type="text" name="company"></label>
+			<label>Ticker Symbol<input type="text" name="ticker"></label>
+			<br>
+			<br>
+			<input type="submit" name = "button" id="btn" value="Submit">
+		</form>
+	</div>
+</body>
+</html>
